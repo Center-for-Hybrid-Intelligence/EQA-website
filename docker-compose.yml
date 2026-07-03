@@ -1,5 +1,5 @@
 services:
-  qea-website:
+  eqa-website:
     container_name: qea-website
     image: nginx:alpine
     volumes:
@@ -7,10 +7,10 @@ services:
     restart: unless-stopped
     networks:
       - caddy
-    #expose:
-    #  - "5010"
-    ports:
-      - "5010:80"
+    expose:
+      - "5010"
+    #ports:
+    #  - "5010:80"
 
 networks:
   caddy:
