@@ -153,6 +153,11 @@ button:hover {
     border-color: var(--orange);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 
 
@@ -219,11 +224,6 @@ nav a:hover {
 }
 @media (max-width: 768px) {
     /**/
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 
