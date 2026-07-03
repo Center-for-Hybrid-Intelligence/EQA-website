@@ -1,0 +1,17 @@
+services:
+  qea-website:
+    container_name: qea-website
+    image: nginx:alpine
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    networks:
+      - caddy
+    #expose:
+    #  - "5010"
+    ports:
+      - "5010:80"
+
+networks:
+  caddy:
+    external: true
