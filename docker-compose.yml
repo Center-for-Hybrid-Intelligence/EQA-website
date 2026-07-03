@@ -1,16 +1,17 @@
 services:
   eqa-website:
-    container_name: qea-website
+    container_name: eqa-website
     image: nginx:alpine
     volumes:
       - ./site:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     restart: unless-stopped
     networks:
       - caddy
-    expose:
-      - "5010"
-    #ports:
-    #  - "5010:80"
+    #expose:
+    #  - "5010"
+    ports:
+      - "5010:80"
 
 networks:
   caddy:
