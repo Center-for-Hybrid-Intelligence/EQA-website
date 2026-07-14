@@ -22,20 +22,24 @@
 }
 
 :root {
+    /* Basic colors */
     --dark: #070a44;
     --light: #e6e7ec;
     --white: #ffffff;
     --black: #000000;
+
+    /* Main colors from when this had the Quantum Flagship palette */
     --pink: #FF037A;
     --orange: #ff7e03;
     --grey: #6b6d8e;
     --turquoise: #00ffbd;
 
-    --header-size: 60px;
-    --footer-size: 20px;
-
+    /* Main colors now */
     --primary: #8f6deb;
     --secondary: #fe8e21;
+
+    --header-size: 60px;
+    --footer-size: 20px;
 }
 
 
