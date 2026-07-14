@@ -2,7 +2,7 @@
 
 - VM path : docker-projects/EQA-website/EQA-website/
 - github repo : https://github.com/Center-for-Hybrid-Intelligence/EQA-website
-- URL : https://staging.hybridintelligence.eu/eqa/contact.html
+- URL : https://staging.hybridintelligence.eu/eqa/home.html
 - Localhost URL : http://localhost:5010/home.html
 
 # Localhost :
