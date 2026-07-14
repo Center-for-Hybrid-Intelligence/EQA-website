@@ -11,7 +11,7 @@ services:
     #expose:
     #  - "5010"
     ports:
-      - "5010:80"
+      - "5010:5010"
 
 networks:
   caddy:
