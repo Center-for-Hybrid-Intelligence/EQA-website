@@ -33,6 +33,9 @@
 
     --header-size: 60px;
     --footer-size: 20px;
+
+    --primary: #8f6deb;
+    --secondary: #fe8e21;
 }
 
 
@@ -47,6 +50,7 @@
     box-sizing: border-box;
 }  
 
+/* Applies to most things */
 body {  
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -63,10 +67,12 @@ body {
     padding-bottom: var(--footer-size);
 }
 
+/* Titles */
 h1 {
     font-family: 'Imperial';
 }
 
+/* Subtitles */
 h5 {
     font-family: 'ReenieBeanie';
 }
@@ -84,6 +90,7 @@ main {
     min-height: 100vh;
 }
 
+/* div | The page's content zone in front of the background image, contains sections for vertical segmenting */
 .centeredContainer {
     max-width: 800px;
     margin: 0 auto;
@@ -95,11 +102,13 @@ main {
     min-height: 100%;
 }
 
+/* used for vertical segments */
 section {
     /*padding: 20px 40px;*/
     padding: 40px 40px;
 }
 
+/* Class applied to a section under the centered container to make it take all of the width ; can be used for a hero or a banner. Is not used at the moment. */
 section.wideSection {
     padding: 20px 0px;
 }
@@ -107,6 +116,7 @@ section.wideSection > img {
     width: 100%;
 }
 
+/* section.biSection : Used to have different content on the left and the right of the page, with 1/3 2/3 share and vertical centering. Is used in Contact. */
 section.biSection {
     display: flex;
     align-items: stretch;
@@ -118,6 +128,7 @@ section.biSection > div {
     justify-content: center;
     align-items: flex-start;
 }
+/* Designate the first and second element of a biSection */
 section.biSection > div.first {
     text-align: left;
     flex: 2;
@@ -126,14 +137,20 @@ section.biSection > div.last {
     flex: 3;
 }
 
+
+
+/* Normal text */
 p {
     font-size: 14px;
 }
+/* Basic text paragraph. */
 p.textParagraph{
     margin-top: 10px;
 }
 
-ul {
+
+
+ul:not(.textList) {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -149,8 +166,8 @@ button {
 }
 button:hover {
     background-color: var(--light);
-    color: var(--orange);
-    border-color: var(--orange);
+    color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 img {
@@ -158,6 +175,13 @@ img {
     height: auto;
 }
 
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--secondary);
+}
 
 
 
@@ -195,6 +219,7 @@ footer > p {
     font-size: 10px;
 }
 
+/* img | Used by the logo in the header */
 .logo {
     height: 50px;
     margin-left: 10px;
@@ -216,11 +241,12 @@ nav a {
     padding: 0.5rem 0; /* Vertical padding for hover effect */
     color: var(--black);
 }
+/* Used by active links. Only used in the navigation menu in the header for now */
 nav a.active {
-    color: var(--orange);
+    color: var(--secondary);
 }
 nav a:hover {
-    color: var(--pink);
+    color: var(--primary);
 }
 @media (max-width: 768px) {
     /**/
@@ -231,22 +257,26 @@ nav a:hover {
 
 
 /* ------------------------
--------    INDEX    -------
+-------    HOME    --------
 ------------------------ */
 
+/* Used by the News list on the home page. Should be used with only 2 li inside */
+.newsList > li {
+    text-align: left;
+}
+
+/* Same as news list but for more concise content. Can have up to four in a list */
 .resourceList > li {
     text-align: left;
     margin-top: 10px;
 }
 
-.newsList > li {
-    text-align: left;
-}
-
+/* List with horizontal short sentences. Contains up to 3 li > p */
 .storiesList {
     margin-top: 20px;
 }
 
+/* Same as newsImage but for resources, has a lower max width */
 .resourceImage {
     border-radius: 0px;
     padding: 0.5rem 0;
@@ -255,6 +285,7 @@ nav a:hover {
     object-fit: cover;
 }
 
+/* Image used in the newsList */
 .newsImage {
     border-radius: 0px;
     padding: 0.5rem 0;
@@ -271,10 +302,24 @@ nav a:hover {
 -------    ABOUT    -------
 ------------------------ */
 
+/* img | Used to make a portrait */
 .aboutPortrait {
     border-radius: 30px;
     padding: 0.5rem 0;
     aspect-ratio: 1;
     max-width: 120px;
     object-fit: cover;
+}
+
+/* p | Justified text, used in the bullet point list in the About page */
+.justifText {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+/* p | Justified text with increased margins, used in all the About page */
+.wpText {
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
